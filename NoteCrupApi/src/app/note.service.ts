@@ -7,13 +7,13 @@ import { Observable } from 'rxjs';
 })
 export class NoteService {
 
-  private baseUrl = 'http://localhost:8080/api/notes';
+  private baseUrl = 'http://localhost:8080/notes';
   constructor(private http: HttpClient) { }
 
   /* Method Get ***********************************************************/
 
   getNote(id:number): Observable<Object> {
-    return this.http.get('http://localhost:8080/notes/${id}');
+    return this.http.get(`http://localhost:8080/notes/${id}`);
   }
   getNoteList(): Observable<any> {
     return this.http.get('http://localhost:8080/notes');
