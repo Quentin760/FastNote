@@ -1,0 +1,9 @@
+<h1>Notes</h1>
+
+<div *ngFor="let note of notes | async" style="width: 300px;">
+  <note-details [note]='note'></note-details>
+</div>
+
+<div>
+  <button type="button" class="button btn-danger" (click)='deleteNotes()'>Delete All</button>
+</div>
