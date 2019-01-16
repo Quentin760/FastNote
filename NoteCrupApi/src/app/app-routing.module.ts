@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'note', pathMatch: 'full'},
   {path: 'note', component: NotesListComponent},
   {path: 'add', component: CreateNoteComponent},
-  {path: 'searchbydate', component: SearchNotesComponent}
+  {path: 'findbydate', component: SearchNotesComponent}
 
 ];
 

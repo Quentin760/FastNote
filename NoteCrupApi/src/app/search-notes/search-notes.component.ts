@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NoteService } from '../note.service';
+import { Note } from "../note";
 
 @Component({
   selector: 'search-notes',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchNotesComponent implements OnInit {
 
-  constructor() { }
+  date: Date;
+  notes: Note[];
+
+  constructor(private dataService: NoteService) { }
 
   ngOnInit() {
+    this.date=null;
+  }
+
+  private searchNote() {
+    this.dataService.getNoteByDate(this.date).subscribe(notes => this.notes = notes)
+  }
+
+  onSubmit() {
+    this.searchNote();
   }
 
 }

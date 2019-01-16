@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface NotesRepository extends JpaRepository<Notes, Long> {
 
+//	public List<Notes> findByDate(Date dateofnote);
+
 }

@@ -32,11 +32,17 @@ public class NotesController {
 		return notes;
 	}
 
+//	@GetMapping(value = "notes/date/{dateofnote}")
+//	public List<Notes> findByDate(@PathVariable Date dateofnote) {
+//		List<Notes> notes = notesRepository.findByDate(dateofnote);
+//		return notes;
+//	}
+
 	@PostMapping(value = "/notes/create")
 	public Notes postNotes(@RequestBody Notes note) {
 
 		Notes _note = notesRepository
-				.save(new Notes(note.getBodyofnote(), note.getTitleofnote(), note.getDateofnote()));
+				.save(new Notes(note.getTitleofnote(), note.getBodyofnote(), note.getDateofnote()));
 		return _note;
 	}
 
