@@ -1,12 +1,18 @@
 
 <div style="padding: 20px;">
-  <h1 style="color: blue">{{title}}</h1>
+  <h1 class="text-center" style="color: blue">{{title}}</h1>
   <h3>{{description}}</h3>
-  <nav>
+  <div class="container">
+      <div class="row">
+  <nav class="text-center" >
+    
     <a routerLink="note" class="btn btn-primary active" role="button" routerLinkActive="active">Notes</a>
     <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
     <a routerLink="findbydate" class="btn btn-primary active" role="button" routerLinkActive="active">Search</a>
   </nav>
+</div> <!-- end of row-->
+</div> <!-- end of container-->
   <router-outlet></router-outlet>
-</div>
+</div> <!-- end of padding 20px-->
+
   

@@ -1,1 +1,24 @@
+/* used for testing purposes*/
+div {border-style: dotted;}
+
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    background-color: #d5d693;
+}
+
+
+h1 {
+    color:#708B75
+}
+
+.postit
+{
+   
+        background-color: #feffb4;
+        width: 150px;
+        border: 1px solid black;
+        padding: 5px;
+        margin: 5px;
+    
+}

@@ -3,7 +3,7 @@
     <label>Title: </label> {{note.titleofnote}}
   </div>
   <div>
-      <label>Text: </label> {{note.bodyofnote}}
+      <label>Text: </label> {{note.bodyofnote | truncatePipe:30 }}
   </div>
   <div>
       <label>Date: </label> {{note.dateofnote}}
