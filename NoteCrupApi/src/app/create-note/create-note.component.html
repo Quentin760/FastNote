@@ -1,6 +1,13 @@
-<h3>Create Note</h3>
-<div [hidden]="submitted" style="width: 300px;">
-  <form (ngSubmit)="onSubmit()">
+<div class="container-fluid">
+
+    <h3 class="text-center">Create Note</h3>
+      <div class="row">
+        <div class="col-2">
+          </div> <!-- end of col 2-->
+           <div class="col center">
+<div class="jumbotron-fluid" [hidden]="submitted" style="width: 300px;"> center
+  <form class="text-center" (ngSubmit)="onSubmit()">
+   
     <div class="form-group">
       <label for="titleofnote">Title of Note</label>
       <input type="text" class="form-control" id="titleofnote" required [(ngModel)]="note.titleofnote" name="titleofnote">
@@ -12,16 +19,23 @@
     <div class="form-group">
       <label for="dateofnote">Date of Note</label>
       <input type="text" class="form-control" id="dateofnote" required [(ngModel)]="note.dateofnote" name="dateofnote">
+      
     </div>
 
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
   </div>
 
-  <div [hidden]="!submitted">
+  <div class="text-center" [hidden]="!submitted">
     <h4>You submit successfully</h4>
-    <button class="btn btn-success" (click)="newNote()">Add</button>
-  </div>
+    <button class="btn btn-success text-center" (click)="newNote()">Add</button>
+    </div>
+  </div> <!-- end of col 10-->
+    <div class="col-2">
+    </div> <!-- end of col 2-->
+  
 
 
+    </div> <!-- end of row -->
+    </div> <!-- end of container-->
 

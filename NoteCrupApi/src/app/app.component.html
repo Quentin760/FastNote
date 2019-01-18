@@ -4,12 +4,16 @@
   <h3>{{description}}</h3>
   <div class="container">
       <div class="row">
-  <nav class="text-center" >
-    
-    <a routerLink="note" class="btn btn-primary active" role="button" routerLinkActive="active">Notes</a>
-    <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
-    <a routerLink="findbydate" class="btn btn-primary active" role="button" routerLinkActive="active">Search</a>
+        <div class="col-3"></div>
+        <div class="col-6">
+  <nav class="text-center">
+ <button mat-menu-item routerLink="note" class="btn btn-success" role="button" routerLinkActive="active"><i class="fas fa-th"></i></button>
+      <button mat-menu-item routerLink="add" class="btn btn-success " role="button" routerLinkActive="active"><i class="fas fa-plus-square"></i></button>
+      <button mat-menu-item routerLink="findbydate" class="btn btn-success" role="button" routerLinkActive="active"><i class="fas fa-search"></i></button>     
+
   </nav>
+</div> <!-- end of center-->
+    <div class="col-3"></div>
 </div> <!-- end of row-->
 </div> <!-- end of container-->
   <router-outlet></router-outlet>
