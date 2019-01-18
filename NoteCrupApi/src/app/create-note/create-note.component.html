@@ -5,8 +5,8 @@
         <div class="col-2">
           </div> <!-- end of col 2-->
            <div class="col center">
-<div class="jumbotron-fluid" [hidden]="submitted" style="width: 300px;"> center
-  <form class="text-center" (ngSubmit)="onSubmit()">
+<div class="jumbotron-fluid" [hidden]="submitted"> 
+ <form class="text-center" (ngSubmit)="onSubmit()">
    
     <div class="form-group">
       <label for="titleofnote">Title of Note</label>
@@ -14,11 +14,13 @@
     </div>
     <div class="form-group">
       <label for="bodyofnote">Body of Note</label>
-      <input type="text" class="form-control" id="bodyofnote" required [(ngModel)]="note.bodyofnote" name="bodyofnote">
+      <textarea cols="10" rows="5"  class="form-control" id="bodyofnote" required [(ngModel)]="note.bodyofnote" name="bodyofnote">
+    </textarea>
+    
     </div>
     <div class="form-group">
       <label for="dateofnote">Date of Note</label>
-      <input type="text" class="form-control" id="dateofnote" required [(ngModel)]="note.dateofnote" name="dateofnote">
+      <input type="date" class="form-control" id="dateofnote" required [(ngModel)]="note.dateofnote" name="dateofnote">
       
     </div>
 
