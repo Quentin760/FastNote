@@ -15,7 +15,7 @@ export class SearchNotesComponent implements OnInit {
   constructor(private dataService: NoteService) { }
 
   ngOnInit() {
-    this.date=null;
+    this.date = 
   }
 
   private searchNote() {

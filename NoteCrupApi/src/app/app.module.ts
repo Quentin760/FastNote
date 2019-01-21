@@ -11,6 +11,8 @@ import { NoteDetailsComponent } from './note-details/note-details.component';
 import { NotesListComponent } from './notes-list/notes-list.component';
 import { SearchNotesComponent } from './search-notes/search-notes.component';
 
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 import { TruncatePipe } from './pipes/truncate-pipe.pipe';
 
 @NgModule({
@@ -27,7 +29,8 @@ import { TruncatePipe } from './pipes/truncate-pipe.pipe';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

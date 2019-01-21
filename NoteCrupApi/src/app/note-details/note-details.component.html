@@ -1,21 +1,18 @@
 
-<div *ngIf='note'>
+<div *ngIf='note' class="row">
   <div>
-    <label>Title: </label> {{note.titleofnote}}
+    <label>Title: </label> {{ note.titleofnote | truncatePipe:[4] }}
   </div>
   <div>
-      <label>Text: </label> {{note.bodyofnote | truncatePipe:30 }}
+      <label>Text: </label> {{ note.bodyofnote | truncatePipe:[5] }}
   </div>
   <div>
-      <label>Date: </label> {{note.dateofnote}}
+      <label>Date: </label> {{ note.dateofnote }}
   </div>
 
+  <div class="modal">
   <span class="button is-small btn-primary" *ngIf='note.active' (click)='updtaeActive(false)'>Inactive</span>
-
   <span class="button is-small btn-primary" *ngIf='!note.active' (click)='updtaeActive(true)'>Active</span>
-
   <span class="button is-small btn-danger" (click)='deleteNote()'>Delete</span>
-
-  <hr/>
 </div>
 
