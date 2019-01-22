@@ -8,7 +8,11 @@ body{
 
 
 h1 {
-    color:rgb(49, 156, 39)
+    color:darkgreen;
+}
+
+label {
+    color:darkgreen;
 }
 
 .postit
@@ -33,6 +37,10 @@ h1 {
         box-shadow:5px 5px 3px white;
 }
 
+.internal{
+    width: 240px;
+    overflow-wrap: break-word;
+}
 
 .box {
 

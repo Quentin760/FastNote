@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
+// https://stackoverflow.com/questions/44669340/how-to-truncate-text-in-angular2 
 @Pipe({
   name: 'truncatePipe'
 })

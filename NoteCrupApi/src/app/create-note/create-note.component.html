@@ -20,11 +20,9 @@
     </div>
     <div class="form-group">
       <label for="dateofnote">Date of Note</label>
-      <input type="datetime" class="form-control" id="dateofnote" required [(ngModel)]="note.dateofnote" name="dateofnote">
-    
-
-
-      
+      <div >
+      <ngb-datepicker class="btn-success" id="dateofnote" required [(ngModel)]="note.dateofnote" name="dateofnote" #d></ngb-datepicker>
+    </div>
     </div>
 
     <button type="submit" class="btn btn-success">Submit</button>

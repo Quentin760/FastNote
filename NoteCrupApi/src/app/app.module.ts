@@ -10,10 +10,16 @@ import { CreateNoteComponent } from './create-note/create-note.component';
 import { NoteDetailsComponent } from './note-details/note-details.component';
 import { NotesListComponent } from './notes-list/notes-list.component';
 import { SearchNotesComponent } from './search-notes/search-notes.component';
-
+//Adds a date time picker view from material
 import {MatDatepickerModule} from '@angular/material/datepicker';
-
+//Edits the length of a note
 import { TruncatePipe } from './pipes/truncate-pipe.pipe';
+//Transforms bodyofnote into links if needed
+import { NgxLinkifyjsModule } from 'ngx-linkifyjs';
+// Allows Drag&Drop in Materials
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
+
 
 @NgModule({
   declarations: [
@@ -30,7 +36,9 @@ import { TruncatePipe } from './pipes/truncate-pipe.pipe';
     FormsModule,
     HttpClientModule,
     NgbModule,
-    MatDatepickerModule
+    MatDatepickerModule,    
+    NgxLinkifyjsModule.forRoot(), // don't remove forRoot() or else !!??
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

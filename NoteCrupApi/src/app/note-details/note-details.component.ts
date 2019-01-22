@@ -2,6 +2,15 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Note } from '../note';
 import { NoteService } from '../note.service';
 import { NotesListComponent } from '../notes-list/notes-list.component';
+import {NgxLinkifyjsService, Link, LinkType} from 'ngx-linkifyjs';
+
+//Two codes imported from Angular Website and Stack OverFlow
+//https://angular.io/api/common/SlicePipe for pipe of slice see HTML area.
+// See pipe file for URL to detail.
+
+
+
+
 
 @Component({
   selector: 'note-details',
@@ -10,15 +19,27 @@ import { NotesListComponent } from '../notes-list/notes-list.component';
 })
 export class NoteDetailsComponent implements OnInit {
 
-  @Input() note: Note;
+  @Input() 
+  note: Note;
 
-  constructor(private noteService: NoteService, private listComponent: NotesListComponent) { }
 
+  constructor(
+    private noteService: NoteService, 
+    private listComponent: NotesListComponent, 
+    public linkifyService: NgxLinkifyjsService) 
+            {
+  const foundLinks: Link[] = this.linkifyService.find(
+    this.noteService.getNoteList.toString()   );
+            }
   ngOnInit() {
   }
 
   updateActive(isActive: boolean) {
-    this.noteService.updateNote(this.note.id, {titleofnote: this.note.titleofnote, bodyofnote: this.note.bodyofnote, dateofnote: this.note.dateofnote, active: isActive})
+    this.noteService.updateNote(this.note.id, {
+      titleofnote: this.note.titleofnote, 
+      bodyofnote: this.note.bodyofnote, 
+      dateofnote: this.note.dateofnote, 
+      active: isActive})
     .subscribe(
       data => {
         console.log(data);
@@ -37,4 +58,7 @@ export class NoteDetailsComponent implements OnInit {
       error => console.log(error)
     );
   }
+
+
+
 }
